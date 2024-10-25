@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div id="root">
+       
+    </div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+    //function to return/mount data to ReactDOM.
+    function Fun(){
+        //image link variable
+        let watch = "https://3.bp.blogspot.com/-CjyRun_bet0/VkB9Cwna7rI/AAAAAAAAucc/MhRRd13fMmM/s1600/DEEP%2BBLUE%2BWatches%2BDIVER%2BPRO%2B1000M%2BAutomatic%2B01.jpg";
+        //title link variable
+        let title = "Automatic Watch"
+        //price tag link variable
+        let price = "$350.00 USD"
+
+      return(
+        <>
+        {/*{main div to add all details of product}*/}
+         <main className="containt">
+            {/*{add the product image dynamically}*/}
+            <img src={watch} className="watch" />
+            {/*{add the product title dynamically}*/}
+            <h1>{title}</h1>
+            {/*{add the product price tag dynamically}*/}
+            <h2 className="price">{price}</h2>
+            {/*{add the product description}*/}
+            <h2 className="h2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nam ullam consequuntur veritatis assumenda totam eos eius minima 
+                cupiditate harum optio sequi explicabo ex dignissimos, enim pariatur quaerat tenetur nihil?</h2>
+            {/*{add another product description}*/}
+            <h3 className="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam architecto atque odio repellat maiores natus ea ratione 
+                commodi laborum quis harum asperiores quam quaerat, quidem, quos ducimus. Deserunt, rerum?</h3>
+
+                <hr/>{/*{hr tag for bottom border}*/}
+
+            {/*{add the product features}*/}
+            <h4 className="feature">FEATURES</h4>
+            <div className="features">
+              <div className="feat1">
+                <li>Chronagraph</li>
+                <p></p>
+                <li>Master Chronometer Certified</li>
+                <p></p>
+                <li>Tachymeter</li>
+              </div>
+
+              <div className="feat2">
+                <li>Anti-magnetic</li>
+                <p></p>
+                <li>Chronometer</li>
+                <p></p>
+                <li>Small seconds</li>
+              </div>
+
+            </div>
+            <hr/>{/*{hr tag for bottom border}*/}
+
+            {/*{add the product Deatails}*/}
+            <h4 className="details">PRODUCT DETAILS</h4>
+            <p><b>Between lugs: </b>20 mm</p>
+            <p><b>Bracelete: </b>leather strap</p>
+            <p><b>Case: </b>Steel</p>
+            <p><b>Case daimeter: </b>42 mm</p>  
+            <p><b>Dial color: </b>Black</p>
+            <p><b>Crystal: </b>Scratch proof, water resistance with ant-reflective treatment.</p>
+            <p><b>Water resistance: </b>5 bar (50 metres / 167 feet)</p> 
+            {/*{button to move product in to card}*/} 
+            <button className="button">ADD TO CART</button> 
+        </main>
+        {/*{footer content}*/}
+        <footer className="footer">
+          <img src="https://cdn4.iconfinder.com/data/icons/proglyphs-traveling/512/Delivery-512.png" className="van"/>
+          <p>2-3 business days delivery</p>      
+        </footer>
+        </>
+      )
+    };
+    {/*{mount the data to ReactDOM}*/}
+    let result = ReactDOM.createRoot(document.getElementById("root"));
+
+    {/*{render the function}*/}
+    result.render(<Fun/>)
+  </script>
+</html>
